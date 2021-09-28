@@ -21,6 +21,7 @@ class OrganizationControllerTest {
     void getOrganizationId() {
         Optional<Organization> result = organizationRepository.findById(1L);
         Assertions.assertTrue(result.isPresent());
+        Assertions.assertEquals(1, (long) result.get().getId());
     }
 
 }
